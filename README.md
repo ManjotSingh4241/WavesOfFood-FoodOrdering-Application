@@ -1,6 +1,11 @@
-🚀 Day 1 of building my food ordering app! 🍔 Just finished designing the login page, where the journey begins for all the food lovers out there! Can't wait to bring this vision to life and serve up some delicious code! 🍕💻 
+🌟 Day 3 of Developing My Food Ordering App! 🌟
+Just added a section with some of the most popular dishes to the home screen! 🍔🥪🍜
+Stay tuned for more updates as this foodie dream turns into reality! 🚀
+Loving the progress so far, and can't wait to share more with you all! 😍
+#WavesOfFood
 
-![1](https://github.com/user-attachments/assets/543679a6-58d2-4b34-916d-221f92e22c12)
+![image](https://github.com/user-attachments/assets/032c37a8-6c38-4eff-844f-601db7219efa)
 
 
-#FoodOrderingApp #AppDesign #UIUXDesign #MobileAppDevelopment #AndroidApp #Kotlin #Firebase #TechInnovation #DigitalTransformation #FoodDelivery #TechJourney #CodingJourney #CodeLife #TechSavvy #AppInspiration #StartupLife #EntrepreneurLife #FutureOfFood #TechForGood #Innovation #TechCommunity #WomenInTech #ProgrammerLife #AppDev #TechLifestyle #UIX #AppDeveloper #CodeNewbie #DailyCoding #TechUpdates
+
+#FoodApp #AndroidDevelopment #CodingLife #AppDevelopment #MobileApp #UIUXDesign #AndroidDev #Foodie #FoodTech #StartUp #DeveloperLife #TechJourney #DailyCoding #AppInTheMaking #CodeWithMe #Java #Kotlin #Firebase #UXDesign #AndroidStudio #Programmer #FoodDelivery #TechUpdates #CodingJourney #AppDesign #TechInnovations
