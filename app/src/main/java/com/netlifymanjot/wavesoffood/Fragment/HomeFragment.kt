@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.interfaces.ItemClickListener
 import com.denzcoskun.imageslider.models.SlideModel
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.netlifymanjot.wavesoffood.MenuBootomSheetFragment
 import com.netlifymanjot.wavesoffood.R
 import com.netlifymanjot.wavesoffood.adapter.PopularAdapter
 import com.netlifymanjot.wavesoffood.databinding.ActivityLoginBinding
@@ -29,6 +31,11 @@ class HomeFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        binding.ViewAllMenu.setOnClickListener{
+            val BottomSheetDialog = MenuBootomSheetFragment()
+            BottomSheetDialog.show(parentFragmentManager, "TEST")
+        }
         return binding.root
 
 
