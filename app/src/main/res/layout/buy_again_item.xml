@@ -24,7 +24,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView7"
+                android:id="@+id/buyAgainFoodImage"
                 android:layout_width="62dp"
                 android:layout_height="62dp"
                 android:layout_marginStart="8dp"
@@ -36,38 +36,39 @@
                 tools:src="@tools:sample/avatars" />
 
             <TextView
-                android:id="@+id/textView25"
+                android:id="@+id/buyAgainFoodName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:fontFamily="@font/yeon_sung"
-                android:textSize="16sp"
                 android:text="Food Name"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/textView26"
-                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/buyAgainFoodPrice"
+                app:layout_constraintStart_toEndOf="@+id/buyAgainFoodImage"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView26"
+                android:id="@+id/buyAgainFoodPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
                 android:text="$5"
                 android:textColor="@color/textColor"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/textView25"
-                app:layout_constraintTop_toBottomOf="@+id/textView25" />
+                app:layout_constraintStart_toStartOf="@+id/buyAgainFoodName"
+                app:layout_constraintTop_toBottomOf="@+id/buyAgainFoodName" />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buyAgainFoodButton"
                 android:layout_width="85dp"
                 android:layout_height="30dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/addtocartshape"
+                android:fontFamily="@font/yeon_sung"
                 android:text="Buy Again"
                 android:textColor="@color/white"
                 android:textSize="14sp"
-                android:fontFamily="@font/yeon_sung"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

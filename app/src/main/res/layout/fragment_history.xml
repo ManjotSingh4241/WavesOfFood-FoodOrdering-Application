@@ -16,11 +16,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="50dp"
             android:fontFamily="@font/yeon_sung"
-            android:textSize="16sp"
             android:text="Recent Buy"
             android:textColor="@color/black"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,7 +41,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView7"
+                    android:id="@+id/buyAgainFoodImage"
                     android:layout_width="62dp"
                     android:layout_height="62dp"
                     android:layout_marginStart="8dp"
@@ -53,7 +53,7 @@
                     tools:src="@tools:sample/avatars" />
 
                 <TextView
-                    android:id="@+id/textView25"
+                    android:id="@+id/buyAgainFoodName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -61,22 +61,23 @@
                     android:textSize="16sp"
                     android:text="Food Name"
                     android:textColor="@color/black"
-                    app:layout_constraintBottom_toTopOf="@+id/textView26"
-                    app:layout_constraintStart_toEndOf="@+id/imageView7"
+                    app:layout_constraintBottom_toTopOf="@+id/buyAgainFoodPrice"
+                    app:layout_constraintStart_toEndOf="@+id/buyAgainFoodImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView26"
+                    android:id="@+id/buyAgainFoodPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:text="$5"
                     android:textColor="@color/textColor"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/textView25"
-                    app:layout_constraintTop_toBottomOf="@+id/textView25" />
+                    app:layout_constraintStart_toStartOf="@+id/buyAgainFoodName"
+                    app:layout_constraintTop_toBottomOf="@+id/buyAgainFoodName" />
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/orderedStatus"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginEnd="32dp"
@@ -103,6 +104,7 @@
             app:layout_constraintTop_toBottomOf="@+id/cardView2" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/BuyAgainRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="16dp"
