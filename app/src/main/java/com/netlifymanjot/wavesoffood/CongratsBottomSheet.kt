@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.netlifymanjot.wavesoffood.databinding.ActivityMainBinding
 import com.netlifymanjot.wavesoffood.databinding.FragmentCongratsBottomSheetBinding
+import com.netlifymanjot.wavesoffood.MainActivity
 
 class CongratsBottomSheet : BottomSheetDialogFragment() {
 private lateinit var binding : FragmentCongratsBottomSheetBinding

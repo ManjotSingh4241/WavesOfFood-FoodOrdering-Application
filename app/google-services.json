@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "947124013247",
+    "firebase_url": "https://wavesoffood-f3944-default-rtdb.firebaseio.com",
+    "project_id": "wavesoffood-f3944",
+    "storage_bucket": "wavesoffood-f3944.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947124013247:android:eb7489cc1564b3a5b95e0a",
+        "android_client_info": {
+          "package_name": "com.netlifymanjot.wavesoffood"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947124013247-5eohd9duf4fmshafiqr0vltn46q1kbsj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD13rqyq5W7tmwpgi7pU1eK0ZczE6bF4g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947124013247-5eohd9duf4fmshafiqr0vltn46q1kbsj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947124013247:android:f375b2bb2d188f16b95e0a",
+        "android_client_info": {
+          "package_name": "com.netlifymanjot.wavesoffoodadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947124013247-htoimbnsiruc823fvpe9lp9mqbgl0jqn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.netlifymanjot.wavesoffoodadmin",
+            "certificate_hash": "1c76102e82cb4f8cbfc1dddd9f305c3bb28c9133"
+          }
+        },
+        {
+          "client_id": "947124013247-5eohd9duf4fmshafiqr0vltn46q1kbsj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAD13rqyq5W7tmwpgi7pU1eK0ZczE6bF4g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947124013247-5eohd9duf4fmshafiqr0vltn46q1kbsj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

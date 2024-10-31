@@ -56,7 +56,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/userName"
         android:layout_width="325dp"
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
@@ -73,7 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/EmailAddress"
         android:layout_width="325dp"
         android:layout_height="57dp"
         android:layout_marginTop="12dp"
@@ -85,12 +85,12 @@
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText"
-        app:layout_constraintStart_toStartOf="@+id/editTextText"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintEnd_toEndOf="@+id/userName"
+        app:layout_constraintStart_toStartOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/password"
         android:layout_width="325dp"
         android:layout_height="57dp"
         android:layout_marginTop="12dp"
@@ -102,9 +102,9 @@
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress2"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
+        app:layout_constraintEnd_toEndOf="@+id/EmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/EmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/EmailAddress" />
 
     <TextView
         android:id="@+id/textView15"
@@ -114,7 +114,7 @@
         android:text="Or"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <TextView
         android:id="@+id/textView16"
@@ -129,13 +129,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button4"
+        android:id="@+id/GoogleButton"
         android:layout_width="152dp"
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
         android:drawableLeft="@drawable/google"
         android:text="GOOGLE"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintEnd_toStartOf="@+id/facebookButton"
         app:layout_constraintHorizontal_bias="0.5"
         android:paddingLeft="15dp"
         android:background="@drawable/whitebutton"
@@ -143,7 +143,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button5"
+        android:id="@+id/facebookButton"
         android:layout_width="152dp"
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
@@ -153,11 +153,11 @@
         android:text="FACEBOOK"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button4"
+        app:layout_constraintStart_toEndOf="@+id/GoogleButton"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button6"
+        android:id="@+id/CreateAccountButton"
         android:layout_width="180dp"
         android:layout_height="57dp"
         android:layout_marginTop="16dp"
@@ -167,7 +167,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4" />
+        app:layout_constraintTop_toBottomOf="@+id/GoogleButton" />
 
     <TextView
         android:id="@+id/alreadyhavebutton"
@@ -180,5 +180,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
+        app:layout_constraintTop_toBottomOf="@+id/CreateAccountButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
