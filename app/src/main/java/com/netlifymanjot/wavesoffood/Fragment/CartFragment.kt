@@ -26,8 +26,8 @@ class CartFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentCartBinding.inflate(inflater, container, false)
-        val cartFoodName = listOf("Burger", "sandwich", "momo", "item", "noodles")
-        val cartItemPrice = listOf("$5", "$6", "$7", "$8", "$10")
+        val cartFoodName = listOf("Burger", "sandwich", "item", "noodles")
+        val cartItemPrice = listOf("$5", "$6", "$7", "$10")
         val cartImage = listOf(
             R.drawable.menu1,
             R.drawable.menu2,

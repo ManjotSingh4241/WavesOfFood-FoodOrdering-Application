@@ -19,7 +19,7 @@
         app:srcCompat="@drawable/arrow_left" />
 
     <TextView
-        android:id="@+id/dataFoodName"
+        android:id="@+id/datailFoodName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -42,7 +42,7 @@
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dataFoodName">
+        app:layout_constraintTop_toBottomOf="@+id/datailFoodName">
 
         <ImageView
             android:id="@+id/detailFoodImage"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView4" />
 
     <TextView
-        android:id="@+id/descriptionTextView"
+        android:id="@+id/detailDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -89,13 +89,13 @@
         android:textColor="@color/textColor"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/descriptionTextView"
+        app:layout_constraintEnd_toEndOf="@+id/detailDescription"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/descriptionTextView"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView" />
+        app:layout_constraintStart_toStartOf="@+id/detailDescription"
+        app:layout_constraintTop_toBottomOf="@+id/detailDescription" />
 
     <TextView
-        android:id="@+id/ingredientTextView"
+        android:id="@+id/detailIngredients"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -120,6 +120,6 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ingredientTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/detailIngredients" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
