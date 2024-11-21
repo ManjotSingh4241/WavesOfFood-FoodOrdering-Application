@@ -7,3 +7,4 @@ data class MenuItem(
     val foodImage :String?=null,
     val foodIngredient :String?=null,
 )
+

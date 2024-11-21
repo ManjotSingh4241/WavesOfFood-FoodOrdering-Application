@@ -2,16 +2,17 @@ package com.netlifymanjot.wavesoffood
 
 import android.net.Uri
 import android.os.Bundle
-import android.renderscript.ScriptGroup.Binding
-import androidx.activity.enableEdgeToEdge
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.bumptech.glide.Glide
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import com.netlifymanjot.wavesoffood.databinding.ActivityDetailsBinding
+import com.netlifymanjot.wavesoffood.model.CartItems
 
 class DetailsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailsBinding
+    private lateinit var auth: FirebaseAuth
     private var foodName: String? = null
     private var foodImage: String? = null
     private var foodDescription: String? = null
@@ -20,29 +21,54 @@ class DetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         binding = ActivityDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        auth = FirebaseAuth.getInstance()
+
         foodName = intent.getStringExtra("MenuItemName")
         foodDescription = intent.getStringExtra("MenuItemDescription")
         foodIngredients = intent.getStringExtra("MenuItemIngredients")
         foodPrice = intent.getStringExtra("MenuItemPrice")
         foodImage = intent.getStringExtra("MenuItemImage")
 
-        with(binding){
+        with(binding) {
             datailFoodName.text = foodName
             detailDescription.text = foodDescription
             detailIngredients.text = foodIngredients
             foodImage?.let {
                 Glide.with(this@DetailsActivity).load(Uri.parse(it)).into(detailFoodImage)
             } ?: run {
-                // Handle the case when foodImage is null, such as by loading a placeholder image
-                detailFoodImage.setImageResource(com.denzcoskun.imageslider.R.drawable.default_loading) // Use a default image
+                detailFoodImage.setImageResource(R.drawable.error)
             }
         }
 
         binding.imageButton.setOnClickListener {
             finish()
         }
+
+        binding.AddItemButtom.setOnClickListener {
+            addItemToCart()
+        }
+    }
+
+    private fun addItemToCart() {
+        val database = FirebaseDatabase.getInstance().reference
+        val userId = auth.currentUser?.uid ?: ""
+
+        val cartItem = CartItems(
+            foodName = foodName ?: "Unknown",
+            foodPrice = foodPrice ?: "0.0",
+            foodDescription = foodDescription ?: "",
+            foodQuantity = "1",
+            foodImage = foodImage ?: ""
+        )
+
+        database.child("user").child(userId).child("CartItems").push().setValue(cartItem)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Item added to cart", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Failed to add item to cart", Toast.LENGTH_SHORT).show()
+            }
     }
 }
