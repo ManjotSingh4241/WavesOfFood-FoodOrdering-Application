@@ -64,11 +64,18 @@ class MenuBootomSheetFragment : BottomSheetDialogFragment() {
     }
     private fun setAdapter() {
         if (menuItems.isNotEmpty()) {
-            val adapter = MenuAdapter(menuItems, requireContext())
+            // Extract data into separate lists
+            val foodNames = menuItems.map { it.foodName ?: "Unknown" }
+            val foodPrices = menuItems.map { it.foodPrice ?: "N/A" }
+            val foodImages = menuItems.map { it.foodImage ?: "" }
+
+            // Pass the extracted lists to the MenuAdapter
+            val adapter = MenuAdapter(foodNames, foodPrices, foodImages, requireContext())
             binding.menuRecyclerView.layoutManager = LinearLayoutManager(requireContext())
             binding.menuRecyclerView.adapter = adapter
         }
     }
+
 
     companion object {
     }

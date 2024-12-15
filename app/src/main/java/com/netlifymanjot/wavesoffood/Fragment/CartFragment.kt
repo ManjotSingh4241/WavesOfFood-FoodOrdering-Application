@@ -50,8 +50,6 @@ class CartFragment : Fragment() {
 
         binding.proceedButton.setOnClickListener {
             getOrderItemsDetails()
-            val intent = Intent(requireContext(), PayOutActivity::class.java)
-            startActivity(intent)
         }
 
         return binding.root
@@ -87,13 +85,12 @@ class CartFragment : Fragment() {
                 )
             }
 
-           
-
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(requireContext(), "Order making failed...", Toast.LENGTH_SHORT).show()
             }
         })
     }
+
     private fun orderNow(
         foodName: MutableList<String>,
         foodPrice: MutableList<String>,
@@ -102,9 +99,19 @@ class CartFragment : Fragment() {
         foodIngredient: MutableList<String>,
         foodQuantities: MutableList<Int>
     ) {
-        if (isAdded && context!=null){
+        if (isAdded && context != null) {
             val intent = Intent(requireContext(), PayOutActivity::class.java)
-            intent.putExtra("foo")
+
+            // Add extras to the intent
+            intent.putStringArrayListExtra("foodNames", ArrayList(foodName))
+            intent.putStringArrayListExtra("foodPrices", ArrayList(foodPrice))
+            intent.putStringArrayListExtra("foodDescriptions", ArrayList(foodDescription))
+            intent.putStringArrayListExtra("foodImages", ArrayList(foodImage))
+            intent.putStringArrayListExtra("foodIngredients", ArrayList(foodIngredient))
+            intent.putIntegerArrayListExtra("foodQuantities", ArrayList(foodQuantities))
+            intent.putExtra("totalAmount", calculateTotalAmount()) // Pass the total amount
+
+            startActivity(intent)
         }
     }
 
@@ -171,5 +178,14 @@ class CartFragment : Fragment() {
             foodIngredients
         )
         binding.cartRecyclerView.adapter = cartAdapter
+    }
+
+    private fun calculateTotalAmount(): String {
+        var totalAmount = 0.0
+        for (i in foodPrices.indices) {
+            val price = foodPrices[i].replace("$", "").toDoubleOrNull() ?: 0.0
+            totalAmount += price * quantity[i]
+        }
+        return "$%.2f".format(totalAmount) // Format total amount as currency
     }
 }

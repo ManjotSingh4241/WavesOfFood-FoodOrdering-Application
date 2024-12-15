@@ -6,6 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.netlifymanjot.wavesoffood.Fragment.HistoryFragment
 import com.netlifymanjot.wavesoffood.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -29,4 +30,13 @@ class MainActivity : AppCompatActivity() {
             bottomSheetDialog.show(supportFragmentManager, "Test")
         }
     }
+    override fun onResume() {
+        super.onResume()
+        if (intent.getStringExtra("navigateTo") == "history") {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView, HistoryFragment())
+                .commit()
+        }
+    }
+
 }

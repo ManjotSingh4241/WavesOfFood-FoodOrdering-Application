@@ -6,132 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.HistoryFragment">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- Recent Buys Label -->
         <TextView
-            android:id="@+id/textView24"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="50dp"
-            android:fontFamily="@font/yeon_sung"
-            android:text="Recent Buy"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView2"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            app:cardCornerRadius="15dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView24">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:id="@+id/buyAgainFoodImage"
-                    android:layout_width="62dp"
-                    android:layout_height="62dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:src="@tools:sample/avatars" />
-
-                <TextView
-                    android:id="@+id/buyAgainFoodName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:fontFamily="@font/yeon_sung"
-                    android:text="Food Name"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/buyAgainFoodPrice"
-                    app:layout_constraintStart_toEndOf="@+id/buyAgainFoodImage"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/buyAgainFoodPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$5"
-                    android:textColor="@color/textColor"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/buyAgainFoodName"
-                    app:layout_constraintTop_toBottomOf="@+id/buyAgainFoodName" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/orderedStatus"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginEnd="32dp"
-                    app:cardBackgroundColor="@android:color/holo_green_dark"
-                    app:cardCornerRadius="20dp"
-                    app:layout_constraintBottom_toTopOf="@+id/receivedButton"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/receivedButton"
-                    android:layout_width="60dp"
-                    android:layout_height="20dp"
-                    android:background="@drawable/addtocartshape"
-                    android:fontFamily="@font/yeon_sung"
-                    android:text="Received"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/orderedStatus"
-                    app:layout_constraintHorizontal_bias="0.5"
-                    app:layout_constraintStart_toStartOf="@+id/orderedStatus"
-                    app:layout_constraintTop_toBottomOf="@+id/orderedStatus" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/textView27"
+            android:id="@+id/recentBuyLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="80dp"
             android:fontFamily="@font/yeon_sung"
-            android:text="Recent Buy"
+            android:text="Recent Buys"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- Recent Buys RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recentBuyRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/recentBuyLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/orderHistoryLabel"
+            tools:listitem="@layout/buy_again_item" />
+
+        <!-- Order History Label -->
+        <TextView
+            android:id="@+id/orderHistoryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/yeon_sung"
+            android:text="Order History"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/recentBuyLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Order History RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/BuyAgainRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="52dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView27"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@id/orderHistoryLabel"
             tools:listitem="@layout/buy_again_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

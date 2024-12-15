@@ -13,6 +13,7 @@
         android:layout_marginTop="56dp"
         android:orientation="vertical">
 
+        <!-- Name Field -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -36,6 +37,7 @@
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/nameEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -44,11 +46,10 @@
                 android:inputType="text"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
-                android:text="Admin"
                 android:textColor="@android:color/black" />
-
         </LinearLayout>
 
+        <!-- Address Field -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,21 +73,19 @@
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/addressEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/lato_bold"
                 android:inputType="textMultiLine"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
-                android:text="Name"
                 android:textColor="@android:color/black" />
-
         </LinearLayout>
 
+        <!-- Email Field -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -110,6 +109,7 @@
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/emailEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -118,11 +118,10 @@
                 android:inputType="textEmailAddress"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
-                android:text="admin@gmail.com"
                 android:textColor="@android:color/black" />
-
         </LinearLayout>
 
+        <!-- Phone Field -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -147,6 +146,7 @@
                 android:textSize="20sp" />
 
             <EditText
+                android:id="@+id/phoneEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -155,30 +155,23 @@
                 android:inputType="phone"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
-                android:text="1234567890"
                 android:textColor="@android:color/black" />
-
         </LinearLayout>
-
     </LinearLayout>
 
-
+    <!-- Save Button -->
     <androidx.appcompat.widget.AppCompatButton
-        android:background="@drawable/proceedbutton"
-        android:elevation="5dp"
-        android:layout_marginBottom="32dp"
-        android:id="@+id/button7"
+        android:id="@+id/saveInfoButton"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
         android:layout_gravity="bottom"
-        android:layout_weight="1"
-        android:textColor="@color/textColor"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/proceedbutton"
+        android:elevation="5dp"
         android:fontFamily="@font/yeon_sung"
-        android:textSize="20sp"
-        android:text="Save Information" />
-
-
-
+        android:text="Save Information"
+        android:textColor="@color/textColor"
+        android:textSize="20sp" />
 </FrameLayout>

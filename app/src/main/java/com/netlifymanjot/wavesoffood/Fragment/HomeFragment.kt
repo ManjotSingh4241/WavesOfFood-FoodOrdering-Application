@@ -80,10 +80,17 @@ class HomeFragment : Fragment() {
     }
 
     private fun setPopularItemsAdapter(subsetMenuItems: List<MenuItem>) {
-        val adapter = MenuAdapter(subsetMenuItems, requireContext())
+        // Extract foodNames, foodPrices, and foodImages from MenuItem list
+        val foodNames = subsetMenuItems.map { it.foodName ?: "Unknown" }
+        val foodPrices = subsetMenuItems.map { it.foodPrice ?: "N/A" }
+        val foodImages = subsetMenuItems.map { it.foodImage ?: "" }
+
+        // Pass extracted lists to MenuAdapter
+        val adapter = MenuAdapter(foodNames, foodPrices, foodImages, requireContext())
         binding.PopulerRecycleView.layoutManager = LinearLayoutManager(requireContext())
         binding.PopulerRecycleView.adapter = adapter
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

@@ -61,6 +61,7 @@
                 android:text="Name" />
 
             <EditText
+                android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -93,6 +94,7 @@
                 android:text="Address" />
 
             <EditText
+                android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -127,6 +129,7 @@
                 android:text="Phone" />
 
             <EditText
+                android:id="@+id/phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -189,19 +192,18 @@
                 android:paddingLeft="8dp"
                 android:text="Total Amount" />
 
-            <EditText
+            <TextView
+                android:id="@+id/totalAmount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:ems="10"
                 android:fontFamily="@font/yeon_sung"
                 android:gravity="end"
-                android:inputType="none"
                 android:paddingEnd="32dp"
-                android:text="$5"
+                android:text="$0.00"
                 android:textColor="@color/textColor"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
+
         </LinearLayout>
     </LinearLayout>
 
